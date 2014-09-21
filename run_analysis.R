@@ -75,7 +75,7 @@ tidy<-dcast(mfiltered, Subject + Activity ~ variable, mean)
 ##write to file
 
 write.table(tidy, "./tidydataset.txt", row.name = FALSE)
-colnames(tidy)
+
 #############################################
 ##read back
 check<-read.table("./tidydataset.txt", header = TRUE)
