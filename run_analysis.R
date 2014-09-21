@@ -30,7 +30,7 @@ total<-cbind(total, activity_total)
 ##step 2: Extracts only the measurements on the mean and standard deviation for each measurement.
 library(dplyr) ##select, contains
 filtered<-select(total, Subject, Activity, contains("mean\\(\\)"), contains("std\\(\\)"))
-
+dim(filtered)
 ###################################################################
 ##step 3: Uses descriptive activity names to name the activities in the data set
 
@@ -54,10 +54,8 @@ colnames(filtered)<-sub("t ", "Time ", colnames(filtered))
 colnames(filtered)<-sub("f ", "Frequency ", colnames(filtered))
 colnames(filtered)<-sub("Mag ", " Magnitude ", colnames(filtered))
 
-#clean up whitespaces
-colnames(filtered)<-sub("   ", "  ", colnames(filtered))
-colnames(filtered)<-sub("  ", " ", colnames(filtered))
-colnames(filtered)<-gsub(" ", "_", colnames(filtered))
+#remove whitespaces
+colnames(filtered)<-gsub(" ", "", colnames(filtered))
 
 ############################################################################3
 ##step 4: Appropriately labels the data set with descriptive variable names. 
@@ -70,15 +68,15 @@ filtered$Activity<-labels[filtered$Activity, 2]
 filtered$Subject<-as.factor(filtered$Subject)
 library(reshape2) ##melt, dcast
 mfiltered<-melt(filtered, id = c("Subject", "Activity"))
-mfiltered$variable<-paste("Average", mfiltered$variable, sep = "_")
+mfiltered$variable<-paste(mfiltered$variable, "Avg", sep = "")
 tidy<-dcast(mfiltered, Subject + Activity ~ variable, mean)
 
 ##############################################
 ##write to file
 
 write.table(tidy, "./tidydataset.txt", row.name = FALSE)
-
+colnames(tidy)
 #############################################
-##check
+##read back
 check<-read.table("./tidydataset.txt", header = TRUE)
 head(check, n = 10)

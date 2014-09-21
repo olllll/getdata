@@ -32,9 +32,9 @@ As we have it now, dim(filtered) returns 10299 rows * 68 columns
 
 **Step 3** is formed by commands to rename the variables programmatically so they have clear and readable names. 
 
-We use sub() and gsub() to remove parenthesis and "-", rename some parts of the name ("Acc" to "Accelerometer", etc), specify that -x, -y and -z refer to axis and "t" and "f" to time and frequency, and remove blank spaces and substitute them for "_".
+We use sub() and gsub() to remove non-alphanumerical characters such as "-", parenthesis or whitespaces, rename some parts of the name ("Acc" to "Accelerometer", etc), specify that -x, -y and -z refer to axis and "t" and "f" to time and frequency.
 
-Running colnames(filtered) returns a vector of 68 strings. The first two correspond to subject and activity (no changes made here), the other 66 follow the synthax: Domain_TypeOfMeasurement_Source_Measurement(mean/SD)_axis, i.e, colnames(filtered)[3] is "Time_Body_Accelerometer__MEAN_X_axis". 
+Running colnames(filtered) returns a vector of 68 strings. The first two correspond to subject and activity (no changes made here), the other 66 follow the synthax: DomainTypeOfMeasurementSourceMeasurement(mean/SD)axis, i.e, colnames(filtered)[3] is "TimeBodyAccelerometerMEANXaxis". 
 
 Note that, since we are not explained what we want the data for, it is difficult to find a terminology that could fit all uses. In this sense, the terminology chosen respects the intention and logic of the original study, while adding clarity. One downside of this method is that resulting names are long, but on the other hand, IDEs like RStudio allow easy access to all the variables. If you wanted to access filtered$Time_Gravity_Accelerometer_MEAN_Y_axis, you could just type "filtered$T" and then press TAB to cursor up-down through the menu. Also, if at some point this data is needed in some other form (i.e, just the Frequency domain variables captured from the accelerometer) you should be able to subset them. If you need to graph a variable, you could use a temporal alias that fits the graph.
 
@@ -48,6 +48,6 @@ str(filtered$Activity) returns "Factor w/6 levels "LAYING", "SITTING", ..: 33333
 
 **Step** 5 is the final step of the process. We use the melt() and dcast() functions (in the reshape2 package) to reorder the measurements in a narrow form, in function of the subject and the activity (with melt()) and then create a new dataset (in the wide form) that contains one single line for each pair of Subject-Activity (with dcast()).
 
-mfiltered is the melted file. dim(mfiltered) returns 679734 rows * 4 columns. 
+mfiltered is the melted file. dim(mfiltered) returns 679734 rows * 4 columns. We have added the string "Avg" to the variables to indicate that the values will be (in the next step) averages, not real measurements.
 
 Then we dcast mfiltered to obtain the data.frame tidy, which finally contains the mean of each measurement for each Subject-Activity pair. dim(tidy) returns 180 rows * 68 columns.
