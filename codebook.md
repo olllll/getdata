@@ -25,208 +25,276 @@ From this original dataset, data were processed using the R programming language
 
 ##Variables 
 ###Descriptive variables
-1 "Subject"
+1 "Subject":
+
 A unique ID for each subject in the experiment, represented by an integer from 1 to 30
 
-2 "Activity"
+2 "Activity":
+
 A factor representing the 6 activities performed in the experiment: LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS,WALKING_UPSTAIRS
 
 ###Frequency Domain variables
-3 "FrequencyBodyAccelerometerJerkMagnitudeMEANAvg"
+3 "FrequencyBodyAccelerometerJerkMagnitudeMEANAvg":
+
 Average of the means for the Jerk Magnitude obtained by the Accelerometer. Normalized and bounded within [-1, 1].
 
-4 "FrequencyBodyAccelerometerJerkMagnitudeSDAvg"
+4 "FrequencyBodyAccelerometerJerkMagnitudeSDAvg":
+
 Average of the standard deviations for the Jerk Magnitude obtained by the Accelerometer. Normalized and bounded within [-1, 1].
 
-5 "FrequencyBodyAccelerometerJerkMEANXaxisAvg"
+5 "FrequencyBodyAccelerometerJerkMEANXaxisAvg":
+
 Average of the means for the Jerk Magnitude obtained by the Accelerometer on the X axis. Normalized and bounded within [-1, 1].
 
-6 "FrequencyBodyAccelerometerJerkMEANYaxisAvg"
+6 "FrequencyBodyAccelerometerJerkMEANYaxisAvg":
+
 Average of the means for the Jerk Magnitude obtained by the Accelerometer on the Y axis. Normalized and bounded within [-1, 1].
 
-7 "FrequencyBodyAccelerometerJerkMEANZaxisAvg"
+7 "FrequencyBodyAccelerometerJerkMEANZaxisAvg":
+
 Average of the means for the Jerk Magnitude obtained by the Accelerometer on the Z axis. Normalized and bounded within [-1, 1].
 
-8 "FrequencyBodyAccelerometerJerkSDXaxisAvg"
+8 "FrequencyBodyAccelerometerJerkSDXaxisAvg":
+
 Average of the standard deviations for the Jerk Magnitude obtained by the Accelerometer on the X axis. Normalized and bounded within [-1, 1].
 
-9 "FrequencyBodyAccelerometerJerkSDYaxisAvg"
+9 "FrequencyBodyAccelerometerJerkSDYaxisAvg":
+
 Average of the standard deviations for the Jerk Magnitude obtained by the Accelerometer on the Y axis. Normalized and bounded within [-1, 1].
 
 10 "FrequencyBodyAccelerometerJerkSDZaxisAvg"
+
 Average of the standard deviations for the Jerk Magnitude obtained by the Accelerometer on the Z axis. Normalized and bounded within [-1, 1].
 
-11 "FrequencyBodyAccelerometerMagnitudeMEANAvg"
+11 "FrequencyBodyAccelerometerMagnitudeMEANAvg":
+
 Average of the means for the Magnitude obtained by the Accelerometer. Normalized and bounded within [-1, 1].
 
-12 "FrequencyBodyAccelerometerMagnitudeSDAvg"
+12 "FrequencyBodyAccelerometerMagnitudeSDAvg":
+
 Average of the standard deviations for the Magnitude obtained by the Accelerometer. Normalized and bounded within [-1, 1].
 
-13 "FrequencyBodyAccelerometerMEANXaxisAvg"
+13 "FrequencyBodyAccelerometerMEANXaxisAvg":
+
 Average of the means for the body acceleration obtained by the Accelerometer on the X axis. Normalized and bounded within [-1, 1].
 
-14 "FrequencyBodyAccelerometerMEANYaxisAvg"
+14 "FrequencyBodyAccelerometerMEANYaxisAvg":
+
 Average of the means for the body acceleration obtained by the Accelerometer on the Y axis. Normalized and bounded within [-1, 1].
 
-15 "FrequencyBodyAccelerometerMEANZaxisAvg"
+15 "FrequencyBodyAccelerometerMEANZaxisAvg":
+
 Average of the means for the body acceleration obtained by the Accelerometer on the Z axis. Normalized and bounded within [-1, 1].
 
-16 "FrequencyBodyAccelerometerSDXaxisAvg"
+16 "FrequencyBodyAccelerometerSDXaxisAvg":
+
 Average of the standard deviations for the body acceleration obtained by the Accelerometer on the X axis. Normalized and bounded within [-1, 1].
 
-17 "FrequencyBodyAccelerometerSDYaxisAvg"
+17 "FrequencyBodyAccelerometerSDYaxisAvg":
+
 Average of the standard deviations for the body acceleration obtained by the Accelerometer on the Y axis. Normalized and bounded within [-1, 1].
 
-18 "FrequencyBodyAccelerometerSDZaxisAvg"
+18 "FrequencyBodyAccelerometerSDZaxisAvg":
+
 Average of the standard deviations for the body acceleration obtained by the Accelerometer on the Z axis. Normalized and bounded within [-1, 1].
 
-19 "FrequencyBodyGyroscopeJerkMagnitudeMEANAvg"
+19 "FrequencyBodyGyroscopeJerkMagnitudeMEANAvg":
+
 Average of the means for the Jerk magnitude obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-20 "FrequencyBodyGyroscopeJerkMagnitudeSDAvg"
+20 "FrequencyBodyGyroscopeJerkMagnitudeSDAvg":
+
 Average of the standard deviations for the Jerk magnitude obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-21 "FrequencyBodyGyroscopeMagnitudeMEANAvg"
+21 "FrequencyBodyGyroscopeMagnitudeMEANAvg":
+
 Average of the means for the magnitude obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-22 "FrequencyBodyGyroscopeMagnitudeSDAvg"
+22 "FrequencyBodyGyroscopeMagnitudeSDAvg":
+
 Average of the standard deviations for the magnitude obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-23 "FrequencyBodyGyroscopeMEANXaxisAvg"
+23 "FrequencyBodyGyroscopeMEANXaxisAvg":
+
 Average of the means for the magnitude obtained by the Gyroscope on the X axis. Normalized and bounded within [-1, 1].
 
-24 "FrequencyBodyGyroscopeMEANYaxisAvg"
+24 "FrequencyBodyGyroscopeMEANYaxisAvg":
+
 Average of the means for the magnitude obtained by the Gyroscope on the Y axis. Normalized and bounded within [-1, 1].
 
-25 "FrequencyBodyGyroscopeMEANZaxisAvg"
+25 "FrequencyBodyGyroscopeMEANZaxisAvg":
+
 Average of the means for the magnitude obtained by the Gyroscope on the Z axis. Normalized and bounded within [-1, 1].
 
-26 "FrequencyBodyGyroscopeSDXaxisAvg"
+26 "FrequencyBodyGyroscopeSDXaxisAvg":
+
 Average of the standard deviations for the magnitude obtained by the Gyroscope on the X axis. Normalized and bounded within [-1, 1].
 
-27 "FrequencyBodyGyroscopeSDYaxisAvg"
+27 "FrequencyBodyGyroscopeSDYaxisAvg":
+
 Average of the standard deviations for the magnitude obtained by the Gyroscope on the Y axis. Normalized and bounded within [-1, 1].
 
-28 "FrequencyBodyGyroscopeSDZaxisAvg"
+28 "FrequencyBodyGyroscopeSDZaxisAvg":
+
 Average of the standard deviations for the magnitude obtained by the Gyroscope on the Z axis. Normalized and bounded within [-1, 1].
 
 ###Time domain variables
-29 "TimeBodyAccelerometerJerkMagnitudeMEANAvg"
+29 "TimeBodyAccelerometerJerkMagnitudeMEANAvg":
+
 Average of the means for the Jerk Magnitude of the body acceleration obtained by the Accelerometer. Normalized and bounded within [-1, 1].
 
-30 "TimeBodyAccelerometerJerkMagnitudeSDAvg"
+30 "TimeBodyAccelerometerJerkMagnitudeSDAvg":
+
 Average of the standard deviations for the Jerk Magnitude of the body acceleration obtained by the Accelerometer. Normalized and bounded within [-1, 1].
 
-31 "TimeBodyAccelerometerJerkMEANXaxisAvg"
+31 "TimeBodyAccelerometerJerkMEANXaxisAvg":
+
 Average of the means for the Jerk of the body acceleration obtained by the Accelerometer on the X axis. Normalized and bounded within [-1, 1].
 
-32 "TimeBodyAccelerometerJerkMEANYaxisAvg"
+32 "TimeBodyAccelerometerJerkMEANYaxisAvg":
+
 Average of the means for the Jerk of the body acceleration obtained by the Accelerometer on the Y axis. Normalized and bounded within [-1, 1].
 
-33 "TimeBodyAccelerometerJerkMEANZaxisAvg"
+33 "TimeBodyAccelerometerJerkMEANZaxisAvg":
+
 Average of the means for the Jerk of the body acceleration obtained by the Accelerometer on the Z axis. Normalized and bounded within [-1, 1].
 
-34 "TimeBodyAccelerometerJerkSDXaxisAvg"
+34 "TimeBodyAccelerometerJerkSDXaxisAvg":
+
 Average of the standard deviations for the Jerk of the body acceleration obtained by the Accelerometer on the X axis. Normalized and bounded within [-1, 1].
 
-35 "TimeBodyAccelerometerJerkSDYaxisAvg"
+35 "TimeBodyAccelerometerJerkSDYaxisAvg":
+
 Average of the standard deviations for the Jerk of the body acceleration obtained by the Accelerometer on the Y axis. Normalized and bounded within [-1, 1].
 
-36 "TimeBodyAccelerometerJerkSDZaxisAvg"
+36 "TimeBodyAccelerometerJerkSDZaxisAvg":
+
 Average of the standard deviations for the Jerk of the body acceleration obtained by the Accelerometer on the Z axis. Normalized and bounded within [-1, 1].
 
-37 "TimeBodyAccelerometerMagnitudeMEANAvg"
+37 "TimeBodyAccelerometerMagnitudeMEANAvg":
+
 Average of the means for the Magnitude of the body acceleration obtained by the Accelerometer. Normalized and bounded within [-1, 1].
 
-38 "TimeBodyAccelerometerMagnitudeSDAvg"
+38 "TimeBodyAccelerometerMagnitudeSDAvg":
+
 Average of the standard deviations for the Magnitude of the body acceleration obtained by the Accelerometer. Normalized and bounded within [-1, 1].
 
-39 "TimeBodyAccelerometerMEANXaxisAvg"
+39 "TimeBodyAccelerometerMEANXaxisAvg":
+
 Average of the means for the Magnitude of the body acceleration obtained by the Accelerometer on the X axis. Normalized and bounded within [-1, 1].
 
-40 "TimeBodyAccelerometerMEANYaxisAvg"
+40 "TimeBodyAccelerometerMEANYaxisAvg":
+
 Average of the means for the Magnitude of the body acceleration obtained by the Accelerometer on the Y axis. Normalized and bounded within [-1, 1].
 
-41 "TimeBodyAccelerometerMEANZaxisAvg"
+41 "TimeBodyAccelerometerMEANZaxisAvg":
+
 Average of the means for the Magnitude of the body acceleration obtained by the Accelerometer on the Z axis. Normalized and bounded within [-1, 1].
 
-42 "TimeBodyAccelerometerSDXaxisAvg"
+42 "TimeBodyAccelerometerSDXaxisAvg":
+
 Average of the standard deviations for the Magnitude of the body acceleration obtained by the Accelerometer on the X axis. Normalized and bounded within [-1, 1].
 
-43 "TimeBodyAccelerometerSDYaxisAvg"
+43 "TimeBodyAccelerometerSDYaxisAvg":
+
 Average of the standard deviations for the Magnitude of the body acceleration obtained by the Accelerometer on the Y axis. Normalized and bounded within [-1, 1].
 
-44 "TimeBodyAccelerometerSDZaxisAvg"
+44 "TimeBodyAccelerometerSDZaxisAvg":
+
 Average of the standard deviations for the Magnitude of the body acceleration obtained by the Accelerometer on the Z axis. Normalized and bounded within [-1, 1].
 
-45 "TimeBodyGyroscopeJerkMagnitudeMEANAvg"
+45 "TimeBodyGyroscopeJerkMagnitudeMEANAvg":
+
 Average of the means for the Jerk Magnitude of the body acceleration obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-46 "TimeBodyGyroscopeJerkMagnitudeSDAvg"
+46 "TimeBodyGyroscopeJerkMagnitudeSDAvg":
+
 Average of the standard deviations for the Jerk Magnitude of the body acceleration obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-47 "TimeBodyGyroscopeJerkMEANXaxisAvg"
+47 "TimeBodyGyroscopeJerkMEANXaxisAvg":
+
 Average of the means for the Jerk of the body acceleration obtained by the Gyroscope on the X axis. Normalized and bounded within [-1, 1].
 
-48 "TimeBodyGyroscopeJerkMEANYaxisAvg"
+48 "TimeBodyGyroscopeJerkMEANYaxisAvg":
+
 Average of the means for the Jerk of the body acceleration obtained by the Gyroscope on the Y axis. Normalized and bounded within [-1, 1].
 
-49 "TimeBodyGyroscopeJerkMEANZaxisAvg"
+49 "TimeBodyGyroscopeJerkMEANZaxisAvg":
+
 Average of the means for the Jerk of the body acceleration obtained by the Gyroscope on the Z axis. Normalized and bounded within [-1, 1].
 
-50 "TimeBodyGyroscopeJerkSDXaxisAvg"
+50 "TimeBodyGyroscopeJerkSDXaxisAvg":
+
 Average of the standard deviations for the Jerk of the body acceleration obtained by the Gyroscope on the X axis. Normalized and bounded within [-1, 1].
 
-51 "TimeBodyGyroscopeJerkSDYaxisAvg"
+51 "TimeBodyGyroscopeJerkSDYaxisAvg":
+
 Average of the standard deviations for the Jerk of the body acceleration obtained by the Gyroscope on the Y axis. Normalized and bounded within [-1, 1].
 
-52 "TimeBodyGyroscopeJerkSDZaxisAvg"
+52 "TimeBodyGyroscopeJerkSDZaxisAvg":
+
 Average of the standard deviations for the Jerk of the body acceleration obtained by the Gyroscope on the Z axis. Normalized and bounded within [-1, 1].
 
-53 "TimeBodyGyroscopeMagnitudeMEANAvg"
+53 "TimeBodyGyroscopeMagnitudeMEANAvg":
+
 Average of the means for the Magnitude of the body acceleration obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-54 "TimeBodyGyroscopeMagnitudeSDAvg"
+54 "TimeBodyGyroscopeMagnitudeSDAvg":
+
 Average of the standard deviations for the Magnitude of the body acceleration obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-55 "TimeBodyGyroscopeMEANXaxisAvg"
+55 "TimeBodyGyroscopeMEANXaxisAvg":
+
 Average of the means for the body acceleration obtained by the Gyroscope on the X axis. Normalized and bounded within [-1, 1].
 
-56 "TimeBodyGyroscopeMEANYaxisAvg"
+56 "TimeBodyGyroscopeMEANYaxisAvg":
+
 Average of the means for the body acceleration obtained by the Gyroscope on the Y axis. Normalized and bounded within [-1, 1].
 
-57 "TimeBodyGyroscopeMEANZaxisAvg"
+57 "TimeBodyGyroscopeMEANZaxisAvg":
+
 Average of the means for the body acceleration obtained by the Gyroscope on the Z axis. Normalized and bounded within [-1, 1].
 
-58 "TimeBodyGyroscopeSDXaxisAvg"
+58 "TimeBodyGyroscopeSDXaxisAvg":
+
 Average of the standard deviations for the body acceleration obtained by the Gyroscope on the X axis. Normalized and bounded within [-1, 1].
 
-59 "TimeBodyGyroscopeSDYaxisAvg"
+59 "TimeBodyGyroscopeSDYaxisAvg":
+
 Average of the standard deviations for the body acceleration obtained by the Gyroscope on the Y axis. Normalized and bounded within [-1, 1].
 
-60 "TimeBodyGyroscopeSDZaxisAvg"
+60 "TimeBodyGyroscopeSDZaxisAvg":
+
 Average of the standard deviations for the body acceleration obtained by the Gyroscope on the Z axis. Normalized and bounded within [-1, 1].
 
-61 "TimeGravityAccelerometerMagnitudeMEANAvg"
+61 "TimeGravityAccelerometerMagnitudeMEANAvg":
+
 Average of the means for the Magnitude of the gravity acceleration obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-62 "TimeGravityAccelerometerMagnitudeSDAvg"
+62 "TimeGravityAccelerometerMagnitudeSDAvg":
+
 Average of the standard deviations for the Magnitude of the gravity acceleration obtained by the Gyroscope. Normalized and bounded within [-1, 1].
 
-63 "TimeGravityAccelerometerMEANXaxisAvg"
+63 "TimeGravityAccelerometerMEANXaxisAvg":
+
 Average of the means for the gravity acceleration obtained by the Gyroscope on the X axis. Normalized and bounded within [-1, 1].
 
-64 "TimeGravityAccelerometerMEANYaxisAvg"
+64 "TimeGravityAccelerometerMEANYaxisAvg":
+
 Average of the means for the gravity acceleration obtained by the Gyroscope on the Y axis. Normalized and bounded within [-1, 1].
 
-65 "TimeGravityAccelerometerMEANZaxisAvg"
+65 "TimeGravityAccelerometerMEANZaxisAvg":
+
 Average of the means for the gravity acceleration obtained by the Gyroscope on the Z axis. Normalized and bounded within [-1, 1].
 
-66 "TimeGravityAccelerometerSDXaxisAvg"
+66 "TimeGravityAccelerometerSDXaxisAvg":
+
 Average of the standard deviations for the gravity acceleration obtained by the Gyroscope on the X axis. Normalized and bounded within [-1, 1].
 
-67 "TimeGravityAccelerometerSDYaxisAvg"
+67 "TimeGravityAccelerometerSDYaxisAvg":
+
 Average of the standard deviations for the gravity acceleration obtained by the Gyroscope on the Y axis. Normalized and bounded within [-1, 1].
 
-68 "TimeGravityAccelerometerSDZaxisAvg"
+68 "TimeGravityAccelerometerSDZaxisAvg":
+
 Average of the standard deviations for the gravity acceleration obtained by the Gyroscope on the Z axis. Normalized and bounded within [-1, 1].
