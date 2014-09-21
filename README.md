@@ -26,7 +26,7 @@ dim(total) returns 10299 rows * 564 columns.
 
 For the selection, we use dplyr's select() and contains(). Contains allows us to search for colnames that have the "mean()" and "std()" expressions that we are looking for. The \\ command is used before each parenthesis ("\\(\\)") to indicate that it should interpret the ( and ) signs as characters.
 
-In the dataset there are some columns of type angle(tBodyAccMean,gravity) (col 555). Since the measurement doesn't refer properly to a mean, but instead *uses a mean as an argument*, we've decided to exclude them.
+In the dataset there are some columns of type angle(tBodyAccMean,gravity) (col 555). Since the measurement doesn't refer properly to a mean, but instead *uses a mean as an argument*, we've decided to exclude them. For the same reason, we have excluded the columns with meanFreq().
 
 As we have it now, dim(filtered) returns 10299 rows * 68 columns
 
@@ -36,7 +36,14 @@ We use sub() and gsub() to remove non-alphanumerical characters such as "-", par
 
 Running colnames(filtered) returns a vector of 68 strings. The first two correspond to subject and activity (no changes made here), the other 66 follow the synthax: DomainTypeOfMeasurementSourceMeasurement(mean/SD)axis, i.e, colnames(filtered)[3] is "TimeBodyAccelerometerMEANXaxis". 
 
-Note that, since we are not explained what we want the data for, it is difficult to find a terminology that could fit all uses. In this sense, the terminology chosen respects the intention and logic of the original study, while adding clarity. One downside of this method is that resulting names are long, but on the other hand, IDEs like RStudio allow easy access to all the variables. If you wanted to access filtered$Time_Gravity_Accelerometer_MEAN_Y_axis, you could just type "filtered$T" and then press TAB to cursor up-down through the menu. Also, if at some point this data is needed in some other form (i.e, just the Frequency domain variables captured from the accelerometer) you should be able to subset them. If you need to graph a variable, you could use a temporal alias that fits the graph.
+Note that, since we are not explained what we want the data for, it is difficult to find a terminology that could fit all uses. In this sense, this terminology should be considered "tidy", since it respects, not only the intention and logic of the original study, but also the integrity of the data. One obvious downside of this method is that resulting names are long, but we have taken into consideration that, if we split each variable in a way to get the variables in the most tidy form (i.e, splitting the data by domain, type of measurement, source of the data, axis), we are going to get data with lots of NAs, so what we clean on one side, gets dirtier on the other.
+
+It is also worth noting that I've used "camel case" (that means, without whitespaces but using capital letters to mark the beginning of each word) to improve human readability. At some point, though, someone might consider that it could make the variable names error-prone and it could difficult to analyze them. This issue has been addressed in the forums too (in this discussion, for instance: https://class.coursera.org/getdata-007/forum/thread?thread_id=249). If needed, we could add a line to the script like
+
+colnames(filtered)<-tolower(colnames(filtered))
+
+To get all the names in lower case. If we were going that route, we should change the calls in the subsequent script (for instance, if we are making a call to filtered$Activity, instead it should be filtered$activity).
+
 
 **Step 4** asks to label the activities with meaningful names, since now they are only numerical codes. The "legend" for this can be found in the "activity_labels.txt" file in the original zip, and once we read it it consists of a 2*6 dataframe, the first column with the index and the second with the description. 
 
@@ -46,7 +53,7 @@ filtered$Activity<-labels[filtered$Activity, 2]
 
 str(filtered$Activity) returns "Factor w/6 levels "LAYING", "SITTING", ..: 333333..."
 
-**Step** 5 is the final step of the process. We use the melt() and dcast() functions (in the reshape2 package) to reorder the measurements in a narrow form, in function of the subject and the activity (with melt()) and then create a new dataset (in the wide form) that contains one single line for each pair of Subject-Activity (with dcast()).
+**Step 5** is the final step of the process. We use the melt() and dcast() functions (in the reshape2 package) to reorder the measurements in a narrow form, in function of the subject and the activity (with melt()) and then create a new dataset (in the wide form) that contains one single line for each pair of Subject-Activity (with dcast()).
 
 mfiltered is the melted file. dim(mfiltered) returns 679734 rows * 4 columns. We have added the string "Avg" to the variables to indicate that the values will be (in the next step) averages, not real measurements.
 
